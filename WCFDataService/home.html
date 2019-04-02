@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        table, th, td, tr {
+            border: 2px solid black;
+        }
+
+        hr {
+            height: 3px;
+            background: gray;
+        }
+    </style>
+</head>
+<body ng-app="myApp" ng-controller="mainController">
+    <div>
+        <h2>Person Information</h2><hr />
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="person in PersonVM">
+                    <td>{{person.ID}}</td>
+                    <td>{{person.Name}}</td>
+                    <td>{{person.Age}}</td>
+                    <td>{{person.Address}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="Js/jquery-3.3.1.min.js"></script>
+    <script src="Js/angular.js"></script>
+    <script src="Js/default.js"></script>
+</body>
+</html>
